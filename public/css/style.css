@@ -1,0 +1,105 @@
+:root{
+    --text: #ececec;
+    --background: #1a4566;
+    --light-background: #3090db;
+    --bg-dark-dashboard: #080808;
+    --card-dark: #141414;
+    --border-soft: rgba(255, 255, 255, 0.1);
+    --text-light: #ececec;
+    --bg-sidebar: #1a4566; /* Tom mais escuro */
+    --accent-color: #3090db; /* Tom mais claro */
+    --hover-bg: rgba(255, 255, 255, 0.15); /* Transparência branca no hover */
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    scrollbar-width: smooth;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+}
+
+.right-menu {
+    width: 280px;
+    background-color: var(--bg-sidebar);
+    color: var(--text-light);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.img-right-menu img {
+    height: 80px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid var(--accent-color);
+}
+
+.menu-item {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    color: var(--text-light) !important;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.menu-item:hover {
+    background-color: var(--hover-bg);
+    transform: translateX(5px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu-item.active {
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.footer-right-menu {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+
+.left-menu{
+    height: 100vh;
+}
+
+.link-person img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50px;
+}
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in{
+    animation: fadeIn 0.5s ease-out;
+}
+
+.card-active{
+    background-color: var(--background);
+    border-left: 5px solid var(--light-background);
+}

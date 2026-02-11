@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../public/css/style.css">
+        <link rel="stylesheet" href="../public/css/bootstrap.min.css"/>
+        <title>Sistema</title>
+    </head>
+    <body>
+        <div class="right-menu d-flex flex-column vh-100">
+            <div class="img-right-menu text-center py-4">
+                <img src="../public/img/maqfrio.jpg" alt="Logo do Sistema">
+            </div>
+
+            <div class="d-flex flex-column align-items-center justify-content-start flex-grow-1 w-100 px-3 main-right-menu">
+                <a href="./budgets.html" class="menu-item link-tools" data-page="budgets">
+                    <span>Orçamentos</span>
+                </a>
+                
+                <a href="./services.html" class="menu-item link-tools" data-page="services">
+                    <span>Serviços</span>
+                </a>
+
+                <a href="./finances.html" class="menu-item link-tools" data-page="finances">
+                    <span>Financeiro</span>
+                </a>
+
+                <a href="./stock.html" class="menu-item link-tools" data-page="stock">
+                    <span>Estoque</span>
+                </a>
+
+                <a href="./products.html" class="menu-item link-tools" data-page="products">
+                    <span>Produtos</span>
+                </a>
+
+                <a href="./price.html" class="menu-item link-tools" data-page="price">
+                    <span>Preço dos Itens</span>
+                </a>
+            </div>
+
+            <div class="footer-right-menu d-flex align-items-center justify-content-center p-3 w-100">
+                <a href="../index.html" class="text-light" style="text-decoration: none;"><p class="mb-0 mr-2">Sair</p></a>
+                <img src="../public/icons/bootstrap-icons/door-open.svg" alt="" width="20">
+            </div>
+        </div>
+        <div class="left-menu d-flex flex-column w-100 p-3">
+            <div class="row mb-2">
+                <div class="col-xl-4">
+                    <div class="d-flex align-items-center w-100">
+                        <div class="input-group d-flex border rounded">
+                            <input type="text" class="form-control border-0" aria-label="Username" aria-describedby="basic-addon1" style="color: #ececec;">
+                            <span class="input-group-text border-0" id="basic-addon1" style="background-color: #ffffff;">
+                                <img src="../public/icons/bootstrap-icons/search.svg" alt="lupa">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <p>10 de Fevereiro de 2026 - 04:12 AM</p>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="d-flex align-items-center justify-content-end mr-4">
+                        <a href="" class="d-flex align-items-center mr-2 p-2 bg-primary" style="border-radius: 25px;"><img src="../public/icons/bootstrap-icons/question.svg" alt=""></a>
+                        <a href="" class="d-flex align-items-center mr-4 p-2 bg-primary" style="border-radius: 25px;"><img src="../public/icons/bootstrap-icons/gear.svg" alt=""></a>
+                        <a href="" class="link-person"><img src="../public/img/maqfrio.jpg" alt="foto de perfil"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="main-content">
+                <div class="col-xl-12">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="mb-4 mt-2">
+                                <h2 class="fw-bold">Hello, Sara! 👋</h2>
+                                <p class="text-secondary">This is what's happening in your store this month.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3"> 
+                        <div class="col-xl-6">
+                            <div class="row g-3">
+                                <div class="col-md-6 mb-2">
+                                    <div class="card p-4 shadow rounded-5 h-100" style="background-color: #ffffff; color: #000;">
+                                        <div class="d-flex justify-content-between align-items-start mb-4">
+                                            <span class="fw-bold">Total revenue</span>
+                                            <div class="bg-primary rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 35px; height: 35px;">
+                                                <img src="../public/icons/bootstrap-icons/arrow-up-right.svg" style="filter: invert(1); width: 15px;">
+                                            </div>
+                                        </div>
+                                        <h3 class="fw-bold">$ 99.560</h3>
+                                        <span class="badge rounded-pill bg-success-subtle text-success mt-2">+ 2.5%</span>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-6 mb-2">
+                                    <div class="card p-4 border-0 rounded-5 h-100" style="background-color: #1a1a1a; color: #fff;">
+                                        <div class="d-flex justify-content-between align-items-start mb-4">
+                                            <span class="text-secondary">Total orders</span>
+                                            <div class="bg-dark border border-secondary rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 35px; height: 35px;">
+                                                <img src="../public/icons/bootstrap-icons/arrow-up-right.svg" style="width: 15px;">
+                                            </div>
+                                        </div>
+                                        <h3 class="fw-bold">35</h3>
+                                        <span class="badge rounded-pill bg-danger-subtle text-danger mt-2">- 1.5%</span>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-6">
+                                    <div class="card p-4 border-0 rounded-5" style="background-color: #1a1a1a; color: #fff;">
+                                        <span class="text-secondary">Total visitors</span>
+                                        <h3 class="fw-bold mt-3">45.600</h3>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="card p-4 border-0 rounded-5" style="background-color: #1a1a1a; color: #fff;">
+                                        <span class="text-secondary">Net profit</span>
+                                        <h3 class="fw-bold mt-3">$ 60.450</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card shadow rounded p-4 h-100">
+                                <span class="text-dark">dados teste</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-3">
+                            <div class="card shadow rounded h-100">
+                                <div class="d-flex align-items-center justify-content-center w-100 h-100">                                       
+                                    <span class="text-dark">6</span>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="card shadow rounded h-100">
+                                <div class="d-flex align-items-center justify-content-center w-100 h-100">
+                                    <span class="text-dark">7</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card p-4 border-0 rounded-5 h-100" style="background-color: #1a1a1a; color: #fff;">
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="fw-bold">Revenue</h5>
+                                    <span class="text-secondary small">this month vs last</span>
+                                </div>
+                                <div class="mt-auto" style="height: 200px; background: linear-gradient(transparent, #252525); border-radius: 15px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../public/js/navigation.js"></script>
+        <script src="../public/js/bootstrap.min.js"></script>
+    </body>
+</html>
