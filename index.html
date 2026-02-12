@@ -3,9 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acesse o sistema</title>
+    <title>Login | MaqFrio SaaS</title>
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/index.css">
 </head>
 <body>
-    
+
+<div class="container login-container">
+    <div class="login-card row g-0">
+        <div class="col-md-5 login-info d-none d-md-flex flex-column justify-content-between">
+            <div>
+                <img src="./public/img/maqfrio.jpg" alt="Logo" width="80" style="border-radius: 15px;">
+                <h2 class="fw-bold mt-4">Gestão inteligente para sua climatização.</h2>
+            </div>
+            <p class="text-secondary small mb-0">© 2026 MaqFrio Systems. <br> Soluções em Refrigeração e Ar-condicionado.</p>
+        </div>
+
+        <div class="col-md-7 login-form">
+            <div class="mb-5">
+                <h3 class="fw-bold">Bem-vindo de volta!</h3>
+                <p class="text-secondary">Insira seus dados para acessar sua conta.</p>
+            </div>
+
+            <form id="formLogin">
+                <div class="mb-3">
+                    <label class="form-label small fw-bold">E-mail Corporativo</label>
+                    <input type="email" id="email" class="form-control" placeholder="exemplo@empresa.com" required>
+                </div>
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between">
+                        <label class="form-label small fw-bold">Senha</label>
+                        <a href="#" class="small text-decoration-none">Esqueceu a senha?</a>
+                    </div>
+                    <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary w-100 btn-login mb-4">Entrar no Sistema</button>
+                
+                <div class="text-center">
+                    <p class="small text-secondary">Ainda não tem conta? <a href="#" class="fw-bold text-decoration-none">Falar com suporte</a></p>
+                </div>
+            </form>
+            
+            <div id="loginError" class="alert alert-danger mt-3 d-none small p-2 text-center" role="alert">
+                E-mail ou senha incorretos.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./public/js/auth.js"></script>
 </body>
 </html>

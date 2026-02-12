@@ -46,7 +46,6 @@ function ativarCalculadora() {
 
         document.getElementById('margemValor').innerText = margemPerc;
 
-        // Fórmulas simples:
         const valorImposto = custo * (impostoPerc / 100);
         const precoComImposto = custo + valorImposto;
         const valorLucro = precoComImposto * (margemPerc / 100);
@@ -58,7 +57,6 @@ function ativarCalculadora() {
         document.getElementById('totalImposto').innerText = valorImposto.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
     }
 
-    // Ouve as mudanças nos inputs
     custoInput.addEventListener('input', calcular);
     impostoInput.addEventListener('input', calcular);
     margemInput.addEventListener('input', calcular);
