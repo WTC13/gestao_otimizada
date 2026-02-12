@@ -1,0 +1,120 @@
+<div class="col-xl-12">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold">Equipe e Acessos</h2>
+            <p class="text-secondary">Gerencie os usuários e defina permissões específicas para cada colaborador.</p>
+        </div>
+        <button class="btn btn-dark rounded-pill px-4 shadow-sm" data-bs-toggle="modal" data-bs-target="#modalUsuario">
+            <i class="bi bi-person-plus me-2"></i>+ Novo Usuário
+        </button>
+    </div>
+
+    <div class="card border-0 shadow-sm rounded-5 overflow-hidden">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="bg-light">
+                    <tr>
+                        <th class="ps-4 border-0">Colaborador</th>
+                        <th class="border-0">E-mail</th>
+                        <th class="border-0">Nível de Acesso</th>
+                        <th class="border-0 text-center">Status</th>
+                        <th class="pe-4 border-0 text-end">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="listaUsuarios">
+                    <tr>
+                        <td class="ps-4">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center fw-bold me-3" style="width: 40px; height: 40px;">
+                                    JS
+                                </div>
+                                <div>
+                                    <div class="fw-bold">João Silva</div>
+                                    <small class="text-secondary">Desde 10/02/2026</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>joao@maqfrio.com</td>
+                        <td>
+                            <span class="badge bg-light text-dark border fw-normal px-3 rounded-pill">Personalizado</span>
+                        </td>
+                        <td class="text-center">
+                            <span class="badge bg-success-subtle text-success rounded-pill">Ativo</span>
+                        </td>
+                        <td class="pe-4 text-end">
+                            <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Gerenciar Permissões">
+                                <img src="../public/icons/bootstrap-icons/shield-lock.svg" style="width: 14px;">
+                            </button>
+                            <button class="btn btn-light btn-sm rounded-circle shadow-sm ms-1">
+                                <img src="../public/icons/bootstrap-icons/pencil.svg" style="width: 14px;">
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalUsuario" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 rounded-5 shadow">
+            <div class="modal-header border-0 p-4">
+                <h5 class="fw-bold mb-0">Configurar Usuário</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4 pt-0">
+                <form id="formUsuario">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label small fw-bold">Nome Completo</label>
+                            <input type="text" class="form-control rounded-3" placeholder="Ex: João Silva">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label small fw-bold">E-mail (Login)</label>
+                            <input type="email" class="form-control rounded-3" placeholder="email@empresa.com">
+                        </div>
+                        
+                        <hr class="my-4 opacity-50">
+                        
+                        <h6 class="fw-bold mb-3"><img src="../public/icons/bootstrap-icons/key.svg" class="me-2" width="16">Permissões de Acesso</h6>
+                        
+                        <div class="col-md-6">
+                            <div class="form-check form-switch mb-2">
+                                <input class="form-check-input" type="checkbox" id="p_dashboard" checked>
+                                <label class="form-check-label small" for="p_dashboard">Ver Dashboard</label>
+                            </div>
+                            <div class="form-check form-switch mb-2">
+                                <input class="form-check-input" type="checkbox" id="p_clients">
+                                <label class="form-check-label small" for="p_clients">Gerenciar Clientes</label>
+                            </div>
+                            <div class="form-check form-switch mb-2">
+                                <input class="form-check-input" type="checkbox" id="p_stock">
+                                <label class="form-check-label small" for="p_stock">Acesso ao Estoque</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check form-switch mb-2">
+                                <input class="form-check-input" type="checkbox" id="p_finance">
+                                <label class="form-check-label small" for="p_finance text-danger">Acesso Financeiro</label>
+                            </div>
+                            <div class="form-check form-switch mb-2">
+                                <input class="form-check-input" type="checkbox" id="p_prices">
+                                <label class="form-check-label small" for="p_prices">Editar Preços</label>
+                            </div>
+                            <div class="form-check form-switch mb-2">
+                                <input class="form-check-input" type="checkbox" id="p_users">
+                                <label class="form-check-label small" for="p_users">Gerenciar Usuários</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-end mt-4">
+                        <button type="button" class="btn btn-light rounded-pill px-4 me-2" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary rounded-pill px-4">Salvar Usuário</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
