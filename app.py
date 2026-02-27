@@ -1,21 +1,21 @@
-from flask import Flask, request, jsonify
-from supabase import create_client, Client
-from werkzeug.security import check_password_hash, generate_password_hash
-from flask import Flask, request, jsonify
-from flask_cors import CORS # Adicione isso
 import os
 from dotenv import load_dotenv
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+from supabase import create_client, Client
+from werkzeug.security import check_password_hash
 
-load_dotenv();
+# Carregar variáveis de ambiente
+load_dotenv()
 
 app = Flask(__name__)
+app.secret_key = os.environ.get("FLASK_SECRET_KEY", "chave-padrao-segura")
 CORS(app)
 
+# Configurações do Supabase
 SUPABASE_URL = os.environ.get("CHAVE_URL")
 SUPABASE_KEY = os.environ.get("CHAVE_API")
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
-
-# print(F"chave api: {SUPABASE_KEY}")
 
 @app.route('/api/login', methods=['POST'])
 def login():
@@ -27,23 +27,19 @@ def login():
         return jsonify({"error": "E-mail e senha são obrigatórios"}), 400
 
     try:
-        # 1. Busca o usuário no Supabase pelo e-mail
-        # Também trazemos o enterprise_id e as permissions que definimos no JSONB
+        # 1. Busca o usuário no Supabase
         query = supabase.table("users").select("*, enterprise(status)").eq("email", email).single().execute()
         user = query.data
 
         if not user:
             return jsonify({"error": "Usuário não encontrado"}), 401
 
-        # 2. Verifica se a empresa dele está ativa (Regra de negócio SaaS)
+        # 2. Verifica se a empresa está ativa
         if user.get('enterprise', {}).get('status') != 'active':
             return jsonify({"error": "Assinatura da empresa suspensa ou inativa"}), 403
 
-        # 3. Verifica a senha (usando o hash seguro)
-        # Nota: No cadastro, você deve usar generate_password_hash(senha)
+        # 3. Verifica a senha
         if check_password_hash(user['password_hash'], senha_enviada):
-            
-            # Montamos o objeto de resposta com o que o Front-end precisa
             user_data = {
                 "id": user['id'],
                 "name": user['full_name'],
@@ -52,7 +48,7 @@ def login():
             }
             
             return jsonify({
-                "message": "Login realizado com sucesso",
+                "message": "Login realizado com sucesso!",
                 "user": user_data
             }), 200
         else:

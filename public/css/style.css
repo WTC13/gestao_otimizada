@@ -1,14 +1,13 @@
 :root{
-    --text: #ececec;
+    --bg: #0B1423;
+    --text: #F0F4F8;
     --background: #1a4566;
     --light-background: #3090db;
-    --bg-dark-dashboard: #080808;
-    --card-dark: #141414;
+    --card-dark: #1C2B41;
     --border-soft: rgba(255, 255, 255, 0.1);
-    --text-light: #ececec;
-    --bg-sidebar: #1a4566; /* Tom mais escuro */
-    --accent-color: #3090db; /* Tom mais claro */
-    --hover-bg: rgba(255, 255, 255, 0.15); /* Transparência branca no hover */
+    --bg-sidebar: #111D2F;
+    --accent-color: #94A3B8;
+    --hover-bg: rgba(255, 255, 255, 0.15); 
 }
 
 *{
@@ -30,7 +29,7 @@ body{
 .right-menu {
     width: 280px;
     background-color: var(--bg-sidebar);
-    color: var(--text-light);
+    color: var(--text);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -47,7 +46,7 @@ body{
     padding: 12px 20px;
     margin-bottom: 8px;
     border-radius: 12px;
-    color: var(--text-light) !important;
+    color: var(--text) !important;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
@@ -76,6 +75,7 @@ body{
 
 .left-menu{
     height: 100vh;
+    background-color: var(--bg);
 }
 
 .link-person-function img{
@@ -102,4 +102,12 @@ body{
 .card-active{
     background-color: var(--background);
     border-left: 5px solid var(--light-background);
+}
+
+.menu-card{
+    background-color: var(--card-dark);
+}
+
+.text-header-p{
+    color: var(--accent-color);
 }
