@@ -1,13 +1,13 @@
 :root{
-    --bg: #0B1423;
-    --text: #F0F4F8;
+    --bg: #0F172A;
+    --text: #F8FAFC;
     --background: #1a4566;
-    --light-background: #3090db;
-    --card-dark: #1C2B41;
+    --card-dark: #1E293B;
     --border-soft: rgba(255, 255, 255, 0.1);
-    --bg-sidebar: #111D2F;
-    --accent-color: #94A3B8;
-    --hover-bg: rgba(255, 255, 255, 0.15); 
+    --bg-sidebar: #1E293B;
+    --accent-color: #38BDF8;
+    --hover-bg: rgba(255, 255, 255, 0.15);
+    --border-card: #334155; 
 }
 
 *{
@@ -75,7 +75,7 @@ body{
 
 .left-menu{
     height: 100vh;
-    background-color: var(--bg);
+    background-color: var(--bg) !important;
 }
 
 .link-person-function img{
@@ -101,7 +101,7 @@ body{
 
 .card-active{
     background-color: var(--background);
-    border-left: 5px solid var(--light-background);
+    border-left: 5px solid var(--accent-color);
 }
 
 .menu-card{
@@ -110,4 +110,27 @@ body{
 
 .text-header-p{
     color: var(--accent-color);
+}
+
+.cards{
+    background-color: var(--card-dark) !important;
+    border: solid var(--border-card) 2px !important;
+    border-radius: 25px !important;
+}
+
+                    /* Style Graphics */
+
+.graphic-dash{
+    background-color: var(--bg-sidebar) !important;
+    border: solid var(--accent-color) 1px !important;
+    border-radius: 15px !important;
+}
+
+#graphic_finance{
+    width: 80%;
+    max-width: 600px; /* Limite máximo para não estourar em telas grandes */
+    margin: 50px auto; /* Centraliza na tela */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Um efeito bonitinho */
+    border-radius: 8px;
 }
