@@ -4,6 +4,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from supabase import create_client, Client
 from werkzeug.security import check_password_hash
+from routes.budgets import budgets_bp
 
 # Carregar variáveis de ambiente
 load_dotenv()
@@ -11,6 +12,8 @@ load_dotenv()
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "chave-padrao-segura")
 CORS(app)
+
+app.register_blueprint(budgets_bp)
 
 # Configurações do Supabase
 SUPABASE_URL = os.environ.get("CHAVE_URL")

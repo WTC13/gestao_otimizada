@@ -1,13 +1,13 @@
 :root{
-    --bg: #0F172A;
-    --text: #F8FAFC;
-    --background: #1a4566;
-    --card-dark: #1E293B;
+    --bg: #000B1A;
+    --bg-sidebar: #001533;
+    --card-dark: #00224D;
+    --border-card: #007BFF; 
     --border-soft: rgba(255, 255, 255, 0.1);
-    --bg-sidebar: #1E293B;
     --accent-color: #38BDF8;
     --hover-bg: rgba(255, 255, 255, 0.15);
-    --border-card: #334155; 
+    --text: #F8FAFC;
+    --icons: #00D4FF;
 }
 
 *{
@@ -100,7 +100,7 @@ body{
 }
 
 .card-active{
-    background-color: var(--background);
+    background-color: var(--card-dark);
     border-left: 5px solid var(--accent-color);
 }
 
@@ -128,9 +128,67 @@ body{
 
 #graphic_finance{
     width: 80%;
-    max-width: 600px; /* Limite máximo para não estourar em telas grandes */
-    margin: 50px auto; /* Centraliza na tela */
+    max-width: 600px;
+    margin: 50px auto; 
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Um efeito bonitinho */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
     border-radius: 8px;
+}
+
+                /* Calendar Style */
+
+.agenda-item {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.agenda-item:hover {
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transform: translateY(-2px);
+}
+
+.time-box {
+    min-width: 60px;
+}
+
+.calendar-grid .col {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.calendar-grid .col:hover:not(.text-muted) {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.badge.bg-light {
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+                /* Modals Style */
+
+.modal {
+    z-index: 1060; 
+}
+.modal-backdrop {
+    z-index: 1050;
+}
+
+.modal-content .form-control {
+    border: 1px solid #eee;
+    padding: 0.6rem 1rem;
+}
+
+.modal-content .form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(48, 144, 219, 0.1);
 }

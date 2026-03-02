@@ -33,3 +33,4 @@ links.forEach(click_link => {
         this.closest('.card').classList.add('card-active');
     })
 })
+

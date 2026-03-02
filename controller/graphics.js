@@ -27,6 +27,11 @@ new Chart(dash, {
                     display: false
                 }
             }
+        },
+        animation: {
+            duration: 2000,
+            easing: 'easeOutQuart',
+            loop: false
         }
     }
 })

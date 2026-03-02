@@ -1,27 +1,85 @@
 <div class="col-xl-12">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="fw-bold">Gestão de Orçamentos</h2>
-        <button class="btn btn-primary rounded-pill">+ Novo Orçamento</button>
+        <div>
+            <h2 class="fw-bold">Novo Orçamento</h2>
+            <p class="text-secondary">Selecione o cliente e adicione os serviços/produtos.</p>
+        </div>
     </div>
 
-    <div class="card shadow rounded-5 border-0 p-4">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>Cliente</th>
-                    <th>Data</th>
-                    <th>Valor</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>João Silva</td>
-                    <td>11/02/2026</td>
-                    <td>R$ 1.500,00</td>
-                    <td><span class="badge bg-warning text-dark">Pendente</span></td>
-                </tr>
-            </tbody>
-        </table>
+    <!-- Botão modal para cadastro de orçamento -->
+
+    <!-- <button class="btn btn-primary rounded-pill px-4 shadow-sm" data-bs-toggle="modal" data-bs-target="#modalOrcamento">
+        <i class="bi bi-plus-lg"></i>Novo Orçamento
+    </button> -->
+
+    <div class="card border-0 shadow-sm rounded-5 p-4">
+        <form id="formOrcamento">
+            <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                    <label class="form-label small fw-bold">Cliente</label>
+                    <select id="selectCliente" class="form-select rounded-3" required>
+                        <option value="">Selecione um cliente...</option>
+                        <option value="1">João Silva Exemplo</option>
+                        </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label small fw-bold">Validade</label>
+                    <input type="date" id="validade" class="form-control rounded-3" required>
+                </div>
+                <!-- <div class="col-md-3">
+                    <label class="form-label small fw-bold">Status</label>
+                    <select id="status" class="form-select rounded-3">
+                        <option value="Pendente">Pendente</option>
+                        <option value="Aprovado">Aprovado</option>
+                    </select>
+                </div> -->
+            </div>
+
+            <hr class="my-4">
+
+            <h5 class="fw-bold mb-3">Itens do Orçamento</h5>
+            <div class="row g-2 mb-3 align-items-end">
+                <div class="col-md-5">
+                    <label class="form-label small">Produto/Serviço</label>
+                    <select id="itemSelect" class="form-select rounded-3">
+                        <option value="">Selecione um item...</option>
+                        <option value="p1">p1</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label small">Qtd</label>
+                    <input type="number" id="itemQtd" class="form-control rounded-3" value="1">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label small">Preço Unit.</label>
+                    <input type="number" id="itemPreco" class="form-control rounded-3" step="0.01">
+                </div>
+                <div class="col-md-2">
+                    <button type="button" id="addBtn" class="btn btn-dark w-100 rounded-3">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="table-responsive mb-4">
+                <table class="table table-sm align-middle">
+                    <thead>
+                        <tr class="text-secondary">
+                            <th>Item</th>
+                            <th>Qtd</th>
+                            <th>Unitário</th>
+                            <th>Subtotal</th>
+                            <th class="text-end">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaItens">
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="d-flex justify-content-end align-items-center gap-3">
+                <h4 class="mb-0 fw-bold">Total: R$ <span id="valorTotal">0,00</span></h4>
+                <button type="submit" class="btn btn-primary rounded-pill px-5 shadow ml-2">Salvar Orçamento</button>
+            </div>
+        </form>
+        
     </div>
 </div>
