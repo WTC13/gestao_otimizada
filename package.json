@@ -1,0 +1,21 @@
+{
+  "name": "gestao_otimizada",
+  "version": "1.0.0",
+  "description": "> Sistema web moderno e versátil para controle de orçamentos, serviços e fluxo financeiro, projetado para empresas de refrigeração e diversos outros ramos de atuação.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.103.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.4.2",
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "handlebars": "^4.7.9",
+    "nodemon": "^3.1.14"
+  }
+}

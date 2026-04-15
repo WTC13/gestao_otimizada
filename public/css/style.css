@@ -1,3 +1,7 @@
+@import url(index.css);
+@import url(clock.css);
+@import url(dash.css);
+
 :root{
     --bg: #000B1A;
     --bg-sidebar: #001533;
@@ -22,7 +26,7 @@ html{
 }
 
 body{
-    height: 100vh;
+    height: 110vh;
     display: flex;
 }
 
@@ -74,7 +78,7 @@ body{
 
 
 .left-menu{
-    height: 100vh;
+    height: auto;
     background-color: var(--bg) !important;
 }
 

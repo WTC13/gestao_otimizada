@@ -3,7 +3,7 @@ const conteudo = document.getElementById('main-content');
 
 window.search_page = function(name_page) {
     const conteudo = document.getElementById('main-content');
-    const url = `./${name_page}.html`;
+    const url = `/${name_page}`; 
 
     fetch(url)
         .then(resposta => {
@@ -16,12 +16,9 @@ window.search_page = function(name_page) {
             conteudo.innerHTML = conteudo_html;
             conteudo.classList.add("fade-in");
 
-            if (name_page === 'price') {
+            // Manter suas lógicas específicas
+            if (name_page.includes('price')) {
                 ativarCalculadora();
-            }
-            
-            if (name_page === 'unit_items') {
-                console.log("Página de itens carregada para a categoria:", localStorage.getItem('categoria_atual'));
             }
         })
         .catch(erro => console.error("Erro ao carregar a página!", erro));

@@ -1,2 +1,6 @@
 # arquivos
 teste/
+node_modules/
+public/icons/
+
+.env

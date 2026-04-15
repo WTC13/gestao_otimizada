@@ -4,7 +4,6 @@ myModalEl.addEventListener('hidden.bs.modal', function (event) {
 })
 
 document.addEventListener('click', function (event) {
-    // Verifica se o elemento clicado tem o atributo de abrir o modal
     if (event.target.closest('[data-bs-toggle="modal"]')) {
         const button = event.target.closest('[data-bs-toggle="modal"]');
         const targetSelector = button.getAttribute('data-bs-target');
