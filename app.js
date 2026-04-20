@@ -11,8 +11,8 @@ require("dotenv").config();
 // const port = process.env.PORT;
 
 
-app.engine("hbs", hbs.engine({extname: ".hbs"}));
-app.set("view engine", "hbs");
+app.engine("handlebars", hbs.engine({extname: ".handlebars"}));
+app.set("view engine", "handlebars");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
