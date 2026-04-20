@@ -7,7 +7,7 @@ const auth = require("./routes/auth");
 const cookieParser = require("cookie-parser");
 const protegerRota = require("./middleware/auth_middleware");
 const { verificarLogin } = require("./middleware/auth_middleware");
-require("dotenv").config();
+// require("dotenv").config();
 // const port = process.env.PORT;
 
 
